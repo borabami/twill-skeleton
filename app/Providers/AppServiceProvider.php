@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
          * Settings
          */
         TwillAppSettings::registerSettingsGroups(
+            SettingsGroup::make()->name('general')->label('General'),
             SettingsGroup::make()->name('homepage')->label('Homepage'),
             SettingsGroup::make()->name('logo')->label('Logo and Favicon'),
             SettingsGroup::make()->name('seo')->label(twillTrans('twill-metadata::form.titles.fieldset')),
