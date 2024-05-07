@@ -3,6 +3,9 @@
 /public/build
 /public/hot
 /public/storage
+/public/assets/twill/css
+/public/assets/twill/js
+/public/page-cache
 /storage/*.key
 /vendor
 .env

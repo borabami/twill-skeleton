@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\GeneralSettingsController;
+use App\Http\Controllers\Twill\PageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('pages/{id}/clear-cache', [PageController::class, 'clearPageCache'])->name('page.clear.cache');
+Route::get('clear-cache', [GeneralSettingsController::class, 'clearSiteCache'])->name('site.clear.cache');
+
