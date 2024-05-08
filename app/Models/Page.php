@@ -29,5 +29,24 @@ class Page extends Model
         'title',
     ];
 
-    public \Illuminate\Contracts\Foundation\Application|array|\Illuminate\Config\Repository|\Illuminate\Foundation\Application $metadataFallbacks = [];
+    public $metadataFallbacks = [
+        'title' => 'title',
+        'description' => 'description',
+    ];
+    public $mediasParams = [
+        'cover' => [
+            'default' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'landscape',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+        ],
+    ];
 }

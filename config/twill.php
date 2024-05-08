@@ -34,6 +34,11 @@ return [
                     ]
                 ]
             ],
+
+        ],
+    ],
+    'settings' => [
+        'crops' => [
             'default_social_image' => [
                 'default' => [
                     [

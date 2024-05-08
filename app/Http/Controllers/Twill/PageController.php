@@ -25,7 +25,6 @@ class PageController extends BaseModuleController
     protected function setUpController(): void
     {
         $this->setPermalinkBase('');
-        $this->withoutLanguageInPermalink();
     }
 
     /**
@@ -43,7 +42,7 @@ class PageController extends BaseModuleController
         $form->add(
             Medias::make()->name('cover')->label('Cover image')
         );
-
+        
         $form->add(
             BlockEditor::make()
         );
