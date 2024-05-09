@@ -3,5 +3,3 @@
 
 </script>
 
-<script src="{{ asset('assets/js/webflow.js') }}" type="text/javascript">
-<script src="{{ asset('assets/js/custom.js') }}" type="text/javascript">

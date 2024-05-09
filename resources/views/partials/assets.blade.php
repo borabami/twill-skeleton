@@ -20,7 +20,7 @@ $favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')
 {{-- css --}}
 @vite('resources/css/app.css')
 
-
+@vite('resources/js/custom.js')
 {{-- fonts --}}
 <script src="https://kit.fontawesome.com/cea843e654.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect">
