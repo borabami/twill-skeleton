@@ -1,4 +1,8 @@
-<nav class="mb-10 border-b border-b-primary md:sticky md:z-10 md:top-0 md:py-5 md:bg-white ">
+<nav class="mb-10 border-b  border-b-primary md:sticky md:z-10 md:top-0 md:py-5 md:bg-white ">
+    @php
+    $logo = strtok($image, '?');
+    @endphp
+    <a href="/"><img src="{{ $logo }}" alt="logo" class="logo" width="181" height="42"></a>
     <ul class="px-5 md:flex md:flex-row md:flex-nowrap md:justify-center md:px-0">
         @foreach($links as $link)
         @if ($link->children->count() > 0)
