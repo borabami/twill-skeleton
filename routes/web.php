@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(config('skeleton.enabled_caches'))->group(function () {
+Route::middleware([])->group(function () {
     /**
      * 
      */

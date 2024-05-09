@@ -18,5 +18,8 @@ class MenuLink extends Model implements Sortable
         'published',
         'title',
         'position',
+        'type',
+        'call_to_action_url',
+        'open_in_new_tab',
     ];
 }

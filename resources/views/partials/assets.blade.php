@@ -6,6 +6,10 @@ $favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')
 <link rel="icon" type="image/x-icon" href="{{ $favicon }}">
 @endif
 
+{{-- Loads Inter --}}
+@googlefonts
+
+
 {{-- meta --}}
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -14,7 +18,7 @@ $favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')
 @include('partials.scripts.cookie-solution')
 
 {{-- css --}}
-
+@vite('resources/css/app.css')
 
 
 {{-- fonts --}}
