@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'dashboard' => [
+        'auth_activity_log' => [
+            'login' => true,
+            'logout' => true
+        ]
+    ],
     'block_editor' => [
         'use_twill_blocks' => [],
         'crops' => [

@@ -2,7 +2,8 @@
     <ul class="px-5 md:flex md:flex-row md:flex-nowrap md:justify-center md:px-0">
         @foreach($links as $link)
         @if ($link->children->count() > 0)
-        ka femije
+
+        @include('components.partials.menu_link', ['link' => $link])
 
         @else
         <li
