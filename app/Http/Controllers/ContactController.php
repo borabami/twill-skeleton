@@ -56,7 +56,7 @@ class ContactController extends Controller
         ]);
 
 
-        return redirect()->back()->with('message', $mail_settings["success_message"]);
+        return ['message'=> $mail_settings["success_message"]];
     }
 
     /**

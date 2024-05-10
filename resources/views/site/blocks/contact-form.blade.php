@@ -1,6 +1,6 @@
 <div class="max-w-2xl mx-auto mt-16">
 
-    <form method="POST" action="{{ route('form.contact') }}">
+    <form method="POST" action="{{ route('form.contact') }}" id="contact-form">
     
         @csrf
     
@@ -64,33 +64,26 @@
         <br>
     <div class="flex justify-between">
     
-        <label for="privacy-disclaimer" class="flex space-x-2 items-center"> <input type="checkbox" id="privacy-disclaimer"
-                name="privacy-disclaimer" :value="true" required>
-              {!!$block->translatedInput('privacy_disclaimer')!!}  </label>
-    
+        <label for="privacy-disclaimer" class="flex space-x-2 items-center">
+            <input type="checkbox" id="privacy-disclaimer" name="privacy-disclaimer" :value="on" required>
+            {!!$block->translatedInput('privacy_disclaimer')!!}
+        </label>
         <button type="submit" id="submit" class="bg-blue-400 rounded px-4 py-2">{{$block->translatedInput('submit_button_label')}}</button>
     </div>
+    <div id="privacy-disclaimer-error" class="text-red-500"></div>
     </form>
     </div >
     
-    @if(session('message'))
-      <div id="message" class="section-contact w-container">
-            <div class="success-message">
-    
-            {!! session('message') !!}
-            </div>
-        </div>
-        @endif
-    
+    <div id="message" class="text-green-600 font-semibold max-w-2xl mx-auto"></div>
     
     @if ($errors)
-    <div id="message" class="section-contact w-container">
+    <div id="message" class="bg-red-500 text-white px-2">
     
-        <div class="alert alert-danger">
             @foreach ($errors->all() as $error)
             {{ $error }}<br>
             @endforeach
-        </div>
     </div>
     @endif
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ asset('assets/js/form.js') }}" type="text/javascript"></script>
