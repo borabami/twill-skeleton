@@ -16,7 +16,7 @@
             </div>
           
             <!-- Mobile menu button -->
-            <button class="mobile-menu-button lg:hidden focus:outline-none focus:ring-2 focus:ring-opacity-50">
+            <button class="mobile-menu-button lg:hidden focus:outline-none  focus:ring-opacity-50">
 
          
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 burger-icon">
@@ -30,12 +30,12 @@
 
             <div class="mobile-menu hidden lg:hidden absolute top-full w-full  p-5 bg-white shadow-md z-20">
                 
-                <ul class="px-5 grid justify-center text-center">
+                <ul class="grid justify-center">
                     @foreach($links as $link)
                     @if ($link->children->count() > 0)
-                    @include('components.partials.menu_link', ['link' => $link])
+                    @include('components.partials.menu_link_mobile', ['link' => $link])
                     @else
-                    <li class="py-5 border-t border-gray-200 first:border-t-0 md:py-0 md:px-5 md:border-t-0 md:border-l md:border-gray-200 md:first:border-l-0">
+                    <li class="md:pr-4 text-xl">
 
                         <a href="{{route('frontend.page', [$link->getRelated('page')?->first()?->slug])}}">
                             {{$link->title}}
@@ -49,13 +49,13 @@
 
             <!-- Links Section -->
             <div class="hidden mobile-menu items-center space-x-8 lg:flex">
-                <ul class="px-5 md:flex md:flex-row md:flex-nowrap md:justify-center md:px-0">
+                <ul class="md:flex md:flex-row md:flex-nowrap md:justify-center md:px-0">
                     @foreach($links as $link)
                     @if ($link->children->count() > 0)
      
                     @include('components.partials.menu_link', ['link' => $link])
                     @else
-                    <li class="py-5 border-t border-t-secondary first:border-t-0 md:py-0 md:px-5 md:border-t-0 md:border-l md:border-l-secondary md:first:border-l-0">
+                    <li class="pr-4 text-base">
                         <a href="{{route('frontend.page', [$link->getRelated('page')?->first()?->slug])}}">
                             {{$link->title}}
                         </a>
