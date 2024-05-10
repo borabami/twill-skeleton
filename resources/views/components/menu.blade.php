@@ -14,9 +14,10 @@
                     </h3>
                 </a>
             </div>
-
+          
             <!-- Mobile menu button -->
-            <button class="mobile-menu-button lg:hidden">
+            <button class="mobile-menu-button lg:hidden focus:outline-none focus:ring-2 focus:ring-opacity-50">
+
          
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 burger-icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
@@ -27,13 +28,15 @@
                 </svg>
             </button>
 
-            <div class="mobile-menu hidden absolute  bg-white shadow-md z-20">
-                <ul class="px-5 md:flex md:flex-row md:flex-nowrap md:justify-center md:px-0">
+            <div class="mobile-menu hidden lg:hidden absolute top-full w-full  p-5 bg-white shadow-md z-20">
+                
+                <ul class="px-5 grid justify-center text-center">
                     @foreach($links as $link)
                     @if ($link->children->count() > 0)
                     @include('components.partials.menu_link', ['link' => $link])
                     @else
-                    <li class="py-5 border-t border-t-secondary first:border-t-0 md:py-0 md:px-5 md:border-t-0 md:border-l md:border-l-secondary md:first:border-l-0">
+                    <li class="py-5 border-t border-gray-200 first:border-t-0 md:py-0 md:px-5 md:border-t-0 md:border-l md:border-gray-200 md:first:border-l-0">
+
                         <a href="{{route('frontend.page', [$link->getRelated('page')?->first()?->slug])}}">
                             {{$link->title}}
                         </a>
@@ -41,6 +44,7 @@
                     @endif
                     @endforeach
                 </ul>
+                
             </div>
 
             <!-- Links Section -->
@@ -48,6 +52,7 @@
                 <ul class="px-5 md:flex md:flex-row md:flex-nowrap md:justify-center md:px-0">
                     @foreach($links as $link)
                     @if ($link->children->count() > 0)
+     
                     @include('components.partials.menu_link', ['link' => $link])
                     @else
                     <li class="py-5 border-t border-t-secondary first:border-t-0 md:py-0 md:px-5 md:border-t-0 md:border-l md:border-l-secondary md:first:border-l-0">

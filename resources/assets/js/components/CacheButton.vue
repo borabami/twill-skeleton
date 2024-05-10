@@ -1,7 +1,7 @@
 <template>
     <!-- eslint-disable -->
     <div class="cache-button">
-        <button @click="clearCache" type="button">Clear cfache</button>
+        <button @click="clearCache" type="button">Clear cache</button>
     </div>
 </template>
 
