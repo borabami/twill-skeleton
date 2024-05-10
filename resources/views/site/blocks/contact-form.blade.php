@@ -75,15 +75,9 @@
     </div >
     
     <div id="message" class="text-green-600 font-semibold max-w-2xl mx-auto"></div>
-    
-    @if ($errors)
-    <div id="message" class="bg-red-500 text-white px-2">
-    
-            @foreach ($errors->all() as $error)
-            {{ $error }}<br>
-            @endforeach
-    </div>
-    @endif
+   
+    <div id="errors" class="text-red-500 font-semibold max-w-2xl mx-auto"></div>
+  
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="{{ asset('assets/js/form.js') }}" type="text/javascript"></script>
