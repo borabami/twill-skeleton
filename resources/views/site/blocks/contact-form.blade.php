@@ -1,4 +1,4 @@
-<div class="max-w-2xl mx-auto mt-16">
+<div class="max-w-2xl mx-auto mt-16 px-5 md:px-0">
 
     <form method="POST" action="{{ route('form.contact') }}" id="contact-form">
     

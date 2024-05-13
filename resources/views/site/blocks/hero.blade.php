@@ -2,7 +2,7 @@
 
     <img src="{{$block->image('background-image', 'desktop')}}" alt="Background Image" class="absolute brightness-50 inset-0 w-full h-full object-cover" />
 
-    <div class="absolute inset-0 flex flex-col items-center justify-center max-w-2xl mx-auto">
+    <div class="absolute inset-0 flex flex-col items-center justify-center max-w-2xl mx-auto px-5 md:px-0">
         <div class=" text-white">
             <p class="text-sm">{{$block->translatedInput('subtitle')}}</p>
             <h1 data-w-id="2c9db91f-f074-2622-181b-bad695bdeb4e"
