@@ -14,14 +14,10 @@ use App\Http\Controllers\ContactController;
 */
 
 // Route::middleware(config('skeleton.enabled_caches'))->group(function () {
-    /**
-     * 
-     */
-    Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
-    Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
-<<<<<<< HEAD
-// });
-=======
-    Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('form.contact');
-});
->>>>>>> cd183ff8a5d5d6a71fccb31258d62532b7b08cc8
+/**
+ * 
+ */
+Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
+Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
+
+Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('form.contact');
