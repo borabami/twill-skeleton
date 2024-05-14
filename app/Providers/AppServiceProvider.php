@@ -8,6 +8,7 @@ use Illuminate\Support\ServiceProvider;
 use A17\Twill\Facades\TwillNavigation;
 use A17\Twill\View\Components\Navigation\NavigationLink;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,9 @@ class AppServiceProvider extends ServiceProvider
         TwillNavigation::addLink(
             NavigationLink::make()->forModule('footerMenuLinks')->title('Footer menu')
         );
+        TwillNavigation::addLink(
+            NavigationLink::make()->title('Contact requests')->forRoute('twill.contact.requests')
+        );
 
         /**
          * Settings
@@ -37,6 +41,7 @@ class AppServiceProvider extends ServiceProvider
             SettingsGroup::make()->name('logo')->label('Logo and Favicon'),
             SettingsGroup::make()->name('seo')->label(twillTrans('twill-metadata::form.titles.fieldset')),
             SettingsGroup::make()->name('google')->label('Google Analytics'),
+            SettingsGroup::make()->name('contacts')->label('Contacts'),
             SettingsGroup::make()->name('iubenda')->label('Iubenda'),
             SettingsGroup::make()->name('matomo')->label('Matomo'),
         );

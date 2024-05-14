@@ -35,3 +35,7 @@ To set up this boilerplate on your local machine, follow these steps:
 
    ```bash
    php configure.php
+2. **Install twill**
+    ```bash
+    php artisan twill:install
+    php artisan twill:build --install

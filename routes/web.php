@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +19,9 @@ use Illuminate\Support\Facades\Route;
      */
     Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
     Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
+<<<<<<< HEAD
 // });
+=======
+    Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('form.contact');
+});
+>>>>>>> cd183ff8a5d5d6a71fccb31258d62532b7b08cc8

@@ -11,8 +11,13 @@
   "Inter-MediumItalic.woff2": "/assets/twill/fonts/Inter-MediumItalic.7cd62035.woff2",
   "Inter-Regular.woff": "/assets/twill/fonts/Inter-Regular.4f8a0d7b.woff",
   "Inter-Regular.woff2": "/assets/twill/fonts/Inter-Regular.a2b4ebbf.woff2",
+<<<<<<< HEAD
   "chunk-common.css": "/assets/twill/css/chunk-common.05932cb8.css",
   "chunk-common.js": "/assets/twill/js/chunk-common.3f1a6dd1.js",
+=======
+  "chunk-common.css": "/assets/twill/css/chunk-common.753a7bce.css",
+  "chunk-common.js": "/assets/twill/js/chunk-common.7846a648.js",
+>>>>>>> cd183ff8a5d5d6a71fccb31258d62532b7b08cc8
   "chunk-vendors.css": "/assets/twill/css/chunk-vendors.42fc7b31.css",
   "chunk-vendors.js": "/assets/twill/js/chunk-vendors.68e3666c.js",
   "icons-files.php": "/views/partials/icons/icons-files-svg.blade.php",
