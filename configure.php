@@ -10,6 +10,18 @@ function executeCommand($command)
     echo str_repeat("-", 50) . "\n";
 }
 
+// Prompt the user for environment credentials
+echo "Please provide the environment credentials:\n";
+$dbDatabase = readline("Database Name (default: laravel): ") ?: 'laravel';
+$dbUsername = readline("Database Username (default: root): ") ?: 'root';
+$dbPassword = readline("Database Password : ") ?: '';
+
+
+
+// Run the necessary commands
+echo "Running setup commands...\n";
+executeCommand('composer install');
+executeCommand('npm install');
 // Function to copy file contents, creating destination file if it doesn't exist
 function copyEnvFile($source, $destination)
 {
@@ -23,63 +35,20 @@ function copyEnvFile($source, $destination)
     } else {
         echo "$destination file already exists, skipping copy.\n";
     }
+
+    echo str_repeat("-", 50) . "\n";
 }
+// Update the .env file with the provided credentials
+$envContents = file_get_contents('.env.example');
+$envContents = preg_replace(
+    ['/^\s*DB_DATABASE=.*/m', '/^\s*DB_USERNAME=.*/m', '/^\s*DB_PASSWORD=.*/m'],
+    ["DB_DATABASE=$dbDatabase", "DB_USERNAME=$dbUsername", "DB_PASSWORD=$dbPassword"],
+    $envContents
+);
+file_put_contents('.env', $envContents);
 
-// Array of commands to execute
-$all_commands = [
-    'composer install',
-    'npm install',
-    'cp .env.example .env',
-    'php artisan key:generate',
-    'php artisan twill:install',
-    'php artisan migrate',
-];
-
-$commands = [
-    'composer install',
-    'npm install',
-];
-
-// Prompt the user to confirm before executing commands
-echo "This script will execute the following commands:\n";
-foreach ($all_commands as $command) {
-    echo "$command\n";
-}
-echo "Press 'y' to continue: ";
-$confirmation = trim(fgets(STDIN));
-
-// Check if user wants to continue
-if (strtolower($confirmation) !== 'y') {
-    echo "Exiting...\n";
-    exit;
-}
-
-// Execute each command
-foreach ($commands as $command) {
-    executeCommand($command);
-}
-
-// Copy .env.example to .env if .env doesn't exist
-$envExamplePath = '.env.example';
-$envPath = '.env';
-
-if (file_exists($envExamplePath)) {
-    copyEnvFile($envExamplePath, $envPath);
-} else {
-    echo "Error: .env.example file not found.\n";
-}
-
-echo str_repeat("-", 50) . "\n";
-
-// Generate application key
 executeCommand('php artisan key:generate');
-
-echo str_repeat("-", 50) . "\n";
-
-// Run database migrations
+// executeCommand('php artisan twill:build --install');
 executeCommand('php artisan migrate');
 
-echo str_repeat("-", 50) . "\n";
-
-// Success message
-echo "\033[0;32m Setup completed successfully! \033[0m";
+echo "Setup complete.\n";
