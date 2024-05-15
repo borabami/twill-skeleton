@@ -6,7 +6,7 @@ use App\Models\FooterMenuLink;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-
+use A17\Twill\Facades\TwillAppSettings;
 class Footer extends Component
 {
     /**
@@ -28,6 +28,8 @@ class Footer extends Component
          * */
         $links = FooterMenuLink::published()->get()->toTree();
 
-        return view('components.footer', ['links' => $links]);
+        $image = TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')->image('logo', 'default');
+
+        return view('components.footer', ['links' => $links, 'image' => $image,]);
     }
 }
