@@ -11,8 +11,8 @@
     <x-menu />
 
     <div class="overflow-y-auto">
-        <div class="container max-w-screen-xl mx-auto px-4 pt-24 pb-16">
-            <div>
+        <div class="py-16">
+            <div class="max-w-2xl mx-auto mt-16 px-5 md:px-0">
                 @if($item->hasImage('cover'))
                 <img src="{{ $item->image('cover') }}" alt="{{ $item->imageAltText('cover') }}" />
                 @endif
