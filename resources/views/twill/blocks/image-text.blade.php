@@ -1,4 +1,4 @@
-@twillBlockTitle('Testo dell`immagine')
+@twillBlockTitle('Image & text')
 @twillBlockIcon('image-text')
 
 <x-twill::wysiwyg
