@@ -17,23 +17,23 @@
     
         @endphp
     
-        <label for="{{$name}}" class="label">{{$children->translatedInput('label')}} @if ($required == true)* @endif</label><br>
+        <label for="{{$name}}">{{$children->translatedInput('label')}} @if ($required == true)* @endif</label><br>
     
         @switch($type)
     
         @case("email")
-        <input type="email" id="{{$name}}" name="{{$name}}" placeholder="{{ $placeholder}}" required="{{ $required }}"><br>
+        <input type="email" id="{{$name}}" name="{{$name}}" placeholder="{{ $placeholder}}" required="{{ $required }}" class="p-2 border-2 rounded-lg border-gray-500 w-full mt-2 mb-6"><br>
         @break
     
         @case("textarea")
     
-        <textarea id="{{$name}}" name="{{$name}}" rows="{{$children->input('rows')}}" cols="50" required="{{ $required }}">
+        <textarea id="{{$name}}" name="{{$name}}" rows="{{$children->input('rows')}}" cols="50" required="{{ $required }}" class="p-2 border-2 rounded-lg border-gray-500 w-full mt-2 mb-6">
         </textarea>
         @break
     
         @case("select")
     
-        <select name="{{$name}}" id="{{$name}}" required="{{ $required }}" class="dropdown">
+        <select name="{{$name}}" id="{{$name}}" required="{{ $required }}" class="p-2 border-2 rounded-lg border-gray-500 w-full mt-2 mb-6">
     
             @foreach($children->children as $child)
     
@@ -45,7 +45,7 @@
     
             @endphp
            
-            <option value="{{ $value}}" class="option-style">{{ $option}}</option>
+            <option value="{{ $value}}" class="pt-2">{{ $option}}</option>
               
             @endforeach
     
@@ -56,19 +56,19 @@
         @break
     
         @default
-        <input type="text" id="{{$name}}" name="{{$name}}" placeholder="{{ $placeholder}}" required="{{ $required }}" class="p-2 border-2 rounded-lg border-gray-500 w-full mt-2"><br>
+        <input type="text" id="{{$name}}" name="{{$name}}" placeholder="{{ $placeholder}}" required="{{ $required }}" class="p-2 border-2 rounded-lg border-gray-500 w-full mt-2 mb-6"><br>
         @endswitch
     
         @endforeach
     
         <br>
-    <div class="flex justify-between">
+    <div class="flex justify-between mt-5 space-x-3 items-center">
     
         <label for="privacy-disclaimer" class="flex space-x-2 items-center">
             <input type="checkbox" id="privacy-disclaimer" name="privacy-disclaimer" :value="on" required>
             {!!$block->translatedInput('privacy_disclaimer')!!}
         </label>
-        <button type="submit" id="submit" class="bg-blue-400 rounded px-4 py-2">{{$block->translatedInput('submit_button_label')}}</button>
+        <button type="submit" id="submit" class="bg-blue-400 rounded h-10 px-4">{{$block->translatedInput('submit_button_label')}}</button>
     </div>
     <div id="privacy-disclaimer-error" class="text-red-500"></div>
     </form>
