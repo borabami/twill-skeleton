@@ -32,10 +32,10 @@ $selectOptions = [
 ];
 @endphp
 
-<x-twill::select name="tag" label="Titolo HTML Tag" placeholder="Seleziona un tag di titolo" :options="$selectOptions" default="h1" />
+<x-twill::select name="tag" label="Title HTML Tag" placeholder="Seleziona un tag di title" :options="$selectOptions" default="h1" />
 
-<x-twill::input name="heading" type="text" label="Titolo" :translated="true" />
+<x-twill::input name="heading" type="text" label="Title" :translated="true" />
 
 <hr>
 
-<x-twill::input name="id" type="text" label="Elemento id" note="HTML elemento ID" />
+<x-twill::input name="id" type="text" label="Element id" note="HTML element ID" />
