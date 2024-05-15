@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900 w-full fixed">
+<nav class="bg-white border-gray-200 dark:bg-slate-100 w-full fixed">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         @php
@@ -25,7 +25,7 @@
 
         <div class="mobile-menu hidden lg:hidden w-full">
 
-            <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+            <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-slate-100 dark:border-gray-700">
 
                 @foreach($links as $link)
                 @if ($link->children->count() > 0)
@@ -42,7 +42,7 @@
                 @endphp
                 <li class="lg:pr-4 text-xl">
                     <a href="{{$url}}" @if($link->open_in_new_tab == true) target="_blank" @endif
-                        class="block py-2 px-3 text-white rounded">
+                        class="block py-2 px-3 rounded">
                         {{$link->title}}
                     </a>
                 </li>
@@ -54,7 +54,7 @@
 
         <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
             <ul
-                class="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
+                class="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-slate-100 lg:dark:bg-slate-100 dark:border-gray-700">
                 @foreach($links as $link)
                 @if ($link->children->count() > 0)
                 @include('components.partials.menu_link', ['link' => $link])
@@ -70,7 +70,7 @@
                 @endphp
                 <li>
                     <a href="{{$url}}" @if($link->open_in_new_tab == true) target="_blank" @endif
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  lg:dark:hover:text-blue-500 dark:hover:bg-gray-700  lg:dark:hover:bg-transparent">
                         {{$link->title}}
                     </a>
                 </li>
