@@ -1,20 +1,29 @@
 <footer class="bg-white shadow dark:bg-gray-900 h-[199px]">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-            </a>
+            @php
+            $logo = strtok($image, '?');
+            @endphp
+            <a href="/home" aria-current="page" aria-label="home" class="footer-logo-holder w-nav-brand w--current"><img
+                    src="{{ $logo }}" alt="logo" width="181" height="42" class="footer-logo"></a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
                     @foreach($links as $link)
+                    @php
+                    $button_type = $link->type;
+                    $url = $link->call_to_action_url;
+                    if($button_type == "internal"){
+                    $url = $link->getRelated('page')->first()!=null ? route('frontend.page',
+                    [$link->getRelated('page')->first()?->slug]) : '#';
+                    }  
+                    $currentPageUrl = request()->fullUrl();
+                    @endphp
                     <li class="hover:underline me-4 md:me-6 capitalize">
-                      {{$link->title}}
+                        <a href="{{ $url }}" aria-current="page" aria-label="{{ $link->title }}" @if($link->open_in_new_tab) target="_blank" @endif class="footer-link-block{{ url()->current() == $url ? ' w--current' : '' }}">
+                            {{ $link->title }}
+                        </a>
                     </li>
                     @endforeach
-                    <li class="hover:underline me-4 md:me-6 capitalize">
-                         Privacy Policy
-                      </li>
                 </li>
             </ul>
         </div>

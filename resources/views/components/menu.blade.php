@@ -4,11 +4,8 @@
         @php
         $logo = strtok($image, '?');
         @endphp
-
-        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-        </a>
+           <a href="/home" aria-label="home" aria-current="page" class="brand w-nav-brand w--current" ><img src="{{ $logo }}"
+            alt="logo" class="logo" width="181" height="42"></a>
 
         <!-- Mobile menu button -->
         <button
