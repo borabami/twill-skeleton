@@ -13,11 +13,12 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-// Route::middleware(config('skeleton.enabled_caches'))->group(function () {
-/**
- * 
- */
-Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
-Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
+Route::middleware([])->group(function () {
+    /**
+     * 
+     */
+    Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
+    Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
 
-Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('form.contact');
+    Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('form.contact');
+});

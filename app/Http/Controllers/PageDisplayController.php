@@ -6,6 +6,7 @@ use A17\Twill\Facades\TwillAppSettings;
 use App\Repositories\PageRepository;
 use Illuminate\Contracts\View\View;
 use CwsDigital\TwillMetadata\Traits\SetsMetadata;
+use Illuminate\Support\ItemNotFoundException;
 
 class PageDisplayController extends Controller
 {
@@ -32,15 +33,18 @@ class PageDisplayController extends Controller
      */
     public function home(): View
     {
-        if (TwillAppSettings::get('homepage.homepage.page')?->isNotEmpty()) {
-            /** @var \App\Models\Page $frontPage */
-            $frontPage = TwillAppSettings::get('homepage.homepage.page')->first();
+        try {
+            if (TwillAppSettings::get('homepage.homepage.page')?->isNotEmpty()) {
+                /** @var \App\Models\Page $frontPage */
+                $frontPage = TwillAppSettings::get('homepage.homepage.page')->first();
 
-            if ($frontPage->published) {
-                return view('site.page', ['item' => $frontPage]);
+                if ($frontPage->published) {
+                    return view('site.page', ['item' => $frontPage]);
+                }
             }
-        }
+        } catch (ItemNotFoundException $exception) {
 
-        abort(404);
+            abort(404);
+        }
     }
 }

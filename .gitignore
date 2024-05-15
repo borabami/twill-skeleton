@@ -17,6 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/public/assets/twill/css
-/public/assets/twill/js
+/public/assets/twill/
 /public/page-cache
