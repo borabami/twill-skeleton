@@ -20,8 +20,8 @@
 />
 
 
-<x-twill::medias name="highlight" label="Immagine" />
+<x-twill::medias name="highlight" label="Image" />
 
 <hr>
 
-<x-twill::input name="id" type="text" label="Elemento id" note="HTML elemento ID" />
+<x-twill::input name="id" type="text" label="Element id" note="HTML element ID" />
