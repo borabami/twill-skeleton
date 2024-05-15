@@ -41,7 +41,6 @@ class AppServiceProvider extends ServiceProvider
             SettingsGroup::make()->name('logo')->label('Logo and Favicon'),
             SettingsGroup::make()->name('seo')->label(twillTrans('twill-metadata::form.titles.fieldset')),
             SettingsGroup::make()->name('google')->label('Google Analytics'),
-            SettingsGroup::make()->name('contacts')->label('Contacts'),
             SettingsGroup::make()->name('iubenda')->label('Iubenda'),
             SettingsGroup::make()->name('matomo')->label('Matomo'),
         );
