@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::middleware(config('skeleton.enabled_caches'))->group(function () {
-    /**
-     * 
-     */
-    Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
-    Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
-// });
+/**
+ * 
+ */
+Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
+Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');
+
+Route::post('/contact', [ContactController::class, 'submitContactForm'])->name('form.contact');

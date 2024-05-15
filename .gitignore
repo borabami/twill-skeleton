@@ -3,14 +3,12 @@
 /public/build
 /public/hot
 /public/storage
-/public/assets/twill/css
-/public/assets/twill/js
-/public/page-cache
 /storage/*.key
 /vendor
 .env
 .env.backup
 .env.production
+.phpunit.result.cache
 Homestead.json
 Homestead.yaml
 auth.json
@@ -19,3 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/public/assets/twill/css
+/public/assets/twill/js
+/public/page-cache

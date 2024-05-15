@@ -40,6 +40,34 @@ return [
                     ]
                 ]
             ],
+            'background-image' => [
+                'desktop' => [
+                    [
+                        'name' => 'desktop',
+                        'ratio' => 16 / 9,
+                    ],
+                ],
+                'mobile' => [
+                    [
+                        'name' => 'mobile',
+                        'ratio' => 1,
+                    ],
+                ],
+            ],
+            'icon' => [
+                'desktop' => [
+                    [
+                        'name' => 'desktop',
+                        'ratio' => 16 / 9,
+                    ],
+                ],
+                'mobile' => [
+                    [
+                        'name' => 'mobile',
+                        'ratio' => 1,
+                    ],
+                ],
+            ],
 
         ],
     ],
