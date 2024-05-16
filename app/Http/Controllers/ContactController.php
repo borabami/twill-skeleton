@@ -50,13 +50,9 @@ class ContactController extends Controller
             'contact_block_id' => $request->block_id,
         ]);
 
-        Bus::chain([
-            Mail::to($mail_settings['to'])->send(new ContactFormRequest($mail_settings, $form_data)),
+        Mail::to($mail_settings['to'])->send(new ContactFormRequest($mail_settings, $form_data));
 
-        ]);
-
-
-        return ['message'=> $mail_settings["success_message"]];
+        return ['message' => $mail_settings["success_message"]];
     }
 
     /**

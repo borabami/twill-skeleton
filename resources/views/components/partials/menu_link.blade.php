@@ -1,5 +1,5 @@
 <div class="group">
-    <p class="link-hover cursor-pointer md:pr-4 text-base text-white">{{$link->title}}</p>
+    <p class="link-hover cursor-pointer md:pr-4 text-bas">{{$link->title}}</p>
 
     <nav class="absolute w-52 p-4 shadow-lg bg-white hidden group-hover:block">
         @foreach($link->children as $children)

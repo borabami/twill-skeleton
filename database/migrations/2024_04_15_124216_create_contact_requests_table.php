@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('contact_block_id')->nullable();
             $table->json('form_data');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -31,7 +31,7 @@ class PageDisplayController extends Controller
     /**
      * 
      */
-    public function home(): View
+    public function home()
     {
         try {
             if (TwillAppSettings::get('homepage.homepage.page')?->isNotEmpty()) {

@@ -8,5 +8,7 @@ TwillRoutes::module('pages');
 TwillRoutes::module('menuLinks');
 
 TwillRoutes::module('footerMenuLinks');
+// TwillRoutes::module('contactRequests');
 
-Route::name('contact.requests')->get('contact/requests', [CustomPageController::class, 'showContactRequests']);
+// Route::name('contact.requests')->get('contact/requests', [CustomPageController::class, 'showContactRequests']);
+TwillRoutes::module('contactRequests');
