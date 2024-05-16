@@ -8,20 +8,30 @@
     :translated="true"
 />
 
-<x-twill::wysiwyg
-    type="quill"
-    name="text"
-    label="Text"
-    placeholder="Text"
-    :toolbar-options="[
-        'bold',
-        'italic',
-        ['list' => 'bullet'],
-        ['list' => 'ordered'],
-        [ 'script' => 'super' ],
-        [ 'script' => 'sub' ],
-        'link',
-        'clean'
-    ]"
-    :translated="true"
-/>
+@php
+
+$wysiwygOptions = [
+['header' => [1,2, 3, 4, 5, 6, false]],
+'bold',
+'italic',
+'underline',
+'strike',
+'blockquote',
+'code-block',
+'ordered',
+'bullet',
+'hr',
+'code',
+'link',
+'clean',
+'table',
+'align',
+];
+
+@endphp
+
+<x-twill::wysiwyg name="text" label="Contenuto" placeholder="Contenuto" :toolbar-options="$wysiwygOptions" :translated="true" />
+
+<hr>
+
+<x-twill::input name="id" type="text" label="Elemento id" note="HTML elemento ID" />
