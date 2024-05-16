@@ -1,4 +1,4 @@
-<div class="max-w-2xl mx-auto mt-16 px-5 md:px-0">
+<div class="py-8 mx-auto max-w-2xl">
     <h2 class="mb-4">{{$block->translatedInput('title')}}</h2>
     {!! $block->translatedInput('text') !!}
 </div>

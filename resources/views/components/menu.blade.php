@@ -1,4 +1,4 @@
-<nav class="bg-gray-50 w-full fixed shadow-lg">
+<nav class="bg-gray-50 w-full z-10 fixed shadow-lg">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         @php
