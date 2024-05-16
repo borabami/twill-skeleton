@@ -40,7 +40,7 @@
                 }
 
                 @endphp
-                <li class="lg:pr-4 text-base font-semibold uppercase">
+                <li class="lg:pr-4 text-base font-normal uppercase">
                     <a href="{{$url}}" @if($link->open_in_new_tab == true) target="_blank" @endif
                         class="block px-3 rounded text-gray-600">
                         {{$link->title}}
