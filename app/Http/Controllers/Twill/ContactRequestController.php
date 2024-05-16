@@ -69,7 +69,7 @@ class ContactRequestController extends BaseModuleController
                 ->field('title')
                 ->title(twillTrans('Page'))
                 ->linkCell(function (Model $model) {
-                    return '/admin/pages/' . $model->id . '/edit';
+                    return '/admin/pages/' . $model->blockable->id . '/edit';
                 })
         );
 

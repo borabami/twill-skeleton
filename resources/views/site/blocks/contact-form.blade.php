@@ -90,9 +90,7 @@
 <style>
     .disabled-style {
         opacity: 0.5;
-        /* Example style */
         pointer-events: none;
-        /* Example style */
-        /* Add other styles you want to apply when the button is disabled */
+       
     }
 </style>

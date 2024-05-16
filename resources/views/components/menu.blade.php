@@ -4,7 +4,7 @@
         @php
         $logo = strtok($image, '?');
         @endphp
-           <a href="/home" aria-label="home" aria-current="page" class="brand w-nav-brand w--current" ><img src="{{ $logo }}"
+           <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current" ><img src="{{ $logo }}"
             alt="logo" class="logo" width="181" height="42"></a>
 
         <!-- Mobile menu button -->
