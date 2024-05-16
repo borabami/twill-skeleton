@@ -29,8 +29,11 @@ class AppServiceProvider extends ServiceProvider
             NavigationLink::make()->forModule('footerMenuLinks')->title('Footer menu')
         );
         TwillNavigation::addLink(
-            NavigationLink::make()->title('Contact requests')->forRoute('twill.contact.requests')
+            NavigationLink::make()->forModule('contactRequests')->title('Contact request module')
         );
+        // TwillNavigation::addLink(
+        //     NavigationLink::make()->title('Contact requests')->forRoute('twill.contact.requests')
+        // );
 
         /**
          * Settings

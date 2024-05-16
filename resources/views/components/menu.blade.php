@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200 dark:bg-gray-900 w-full fixed z-10">
+<nav class="bg-gray-50 w-full fixed shadow-lg">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         @php
@@ -9,7 +9,7 @@
 
         <!-- Mobile menu button -->
         <button
-            class="mobile-menu-button inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            class="mobile-menu-button inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
 
             <svg class="w-5 h-5 burger-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 17 14">
@@ -25,7 +25,7 @@
 
         <div class="mobile-menu hidden lg:hidden w-full">
 
-            <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+            <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50">
 
                 @foreach($links as $link)
                 @if ($link->children->count() > 0)
@@ -40,9 +40,9 @@
                 }
 
                 @endphp
-                <li class="lg:pr-4 text-xl">
+                <li class="lg:pr-4 text-base font-normal uppercase">
                     <a href="{{$url}}" @if($link->open_in_new_tab == true) target="_blank" @endif
-                        class="block py-2 px-3 text-white rounded">
+                        class="block px-3 rounded text-gray-600">
                         {{$link->title}}
                     </a>
                 </li>
@@ -54,7 +54,7 @@
 
         <div class="hidden w-full lg:block lg:w-auto" id="navbar-default">
             <ul
-                class="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
+                class="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-gray-5">
                 @foreach($links as $link)
                 @if ($link->children->count() > 0)
                 @include('components.partials.menu_link', ['link' => $link])
@@ -70,7 +70,7 @@
                 @endphp
                 <li>
                     <a href="{{$url}}" @if($link->open_in_new_tab == true) target="_blank" @endif
-                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent">
+                        class="block  text-gray-600 text-base font-normal uppercase lg:hover:text-blue-700">
                         {{$link->title}}
                     </a>
                 </li>
@@ -80,3 +80,4 @@
         </div>
     </div>
 </nav>
+
