@@ -9,6 +9,8 @@ use A17\Twill\Services\Forms\Fields\Input;
 use A17\Twill\Services\Forms\Form;
 use A17\Twill\Http\Controllers\Admin\ModuleController as BaseModuleController;
 use A17\Twill\Models\Model;
+use A17\Twill\Services\Listings\Columns\Relation;
+use Carbon\Carbon;
 
 class ContactRequestController extends BaseModuleController
 {
@@ -25,8 +27,13 @@ class ContactRequestController extends BaseModuleController
         $this->disableBulkPublish();
         $this->disableEditor();
         $this->disableBulkEdit();
+
+        $this->setSearchColumns(['to', 'subject', 'form_data']);
     }
 
+    /**
+     * 
+     */
     protected function getIndexTableColumns(): TableColumns
     {
         $columns = new TableColumns();
@@ -36,10 +43,16 @@ class ContactRequestController extends BaseModuleController
                 ->field('to')
                 ->title(twillTrans('To'))
         );
+        $columns->add(
+            Text::make()
+                ->field('subject')
+                ->title(twillTrans('Subject'))
+        );
 
         $columns->add(
             Text::make()
                 ->field('form_data')
+                ->renderHtml(true)
                 ->title(twillTrans('Form data'))
                 ->customRender(function (Model $model) {
                     $formDataString = '';
@@ -50,22 +63,26 @@ class ContactRequestController extends BaseModuleController
                 })
         );
 
+        $columns->add(
+            Relation::make()
+                ->relation('blockable')
+                ->field('title')
+                ->title(twillTrans('Page'))
+                ->linkCell(function (Model $model) {
+                    return '/admin/pages/' . $model->id . '/edit';
+                })
+        );
+
+        $columns->add(
+            Text::make()
+                ->sortable()
+                ->field('created_at')
+                ->title(twillTrans('Created'))
+                ->customRender(function (Model $model) {
+                    return Carbon::parse($model->created_at)->format('d/m/y H:i:s');
+                })
+        );
 
         return $columns;
     }
-
-
-    /**
-     * This is an example and can be removed if no modifications are needed to the table.
-     */
-    // protected function additionalIndexTableColumns(): TableColumns
-    // {
-    //     $table = parent::additionalIndexTableColumns();
-
-    //     $table->add(
-    //         Text::make()->field('description')->title('Description')
-    //     );
-
-    //     return $table;
-    // }
 }
