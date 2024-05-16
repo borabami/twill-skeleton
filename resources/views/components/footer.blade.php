@@ -6,7 +6,7 @@
             @endphp
             <a href="/home" aria-current="page" aria-label="home" class="footer-logo-holder w-nav-brand w--current"><img
                     src="{{ $logo }}" alt="logo" width="181" height="42" class="footer-logo"></a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <ul class="flex flex-wrap items-center my-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
                     @foreach($links as $link)
                     @php

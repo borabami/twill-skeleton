@@ -42,7 +42,7 @@
                 @endphp
                 <li class="lg:pr-4 text-xl">
                     <a href="{{$url}}" @if($link->open_in_new_tab == true) target="_blank" @endif
-                        class="block py-2 px-3 text-white rounded">
+                        class="block py-2 px-3 text-white rounded text-lg">
                         {{$link->title}}
                     </a>
                 </li>
