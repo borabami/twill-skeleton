@@ -1,4 +1,4 @@
-<div class="relative h-screen w-full mt-16" id="{{$block->input('id')}}">
+<div class="relative h-screen w-full" id="{{$block->input('id')}}">
 
     <img src="{{$block->image('background-image', 'desktop')}}" alt="Background Image" class="absolute brightness-50 inset-0 w-full h-full object-cover" />
 

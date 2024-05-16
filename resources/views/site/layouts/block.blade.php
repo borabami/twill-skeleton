@@ -1,12 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <title>#madewithtwill website</title>
-    @vite('resources/css/app.css')
+    @include('partials.assets')
 </head>
+
 <body>
-<div>
-    @yield('content')
-</div>
+    <div>
+        @yield('content')
+    </div>
+
 </body>
+
 </html>

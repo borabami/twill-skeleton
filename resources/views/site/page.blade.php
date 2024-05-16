@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     {!! SEO::generate() !!}
@@ -18,5 +18,7 @@
 
     <x-footer />
 </body>
+
+@include('partials.footer')
 
 </html>

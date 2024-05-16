@@ -9,7 +9,6 @@ $favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')
 {{-- Loads Inter --}}
 @googlefonts
 
-
 {{-- meta --}}
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -20,7 +19,6 @@ $favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')
 {{-- css --}}
 @vite('resources/css/app.css')
 
-@vite('resources/js/custom.js')
 {{-- fonts --}}
 <script src="https://kit.fontawesome.com/cea843e654.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect">
