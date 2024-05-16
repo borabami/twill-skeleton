@@ -1,14 +1,13 @@
-<div class="relative h-screen w-full mt-16" id="{{$block->input('id')}}">
+<div class="relative h-screen" id="{{$block->input('id')}}">
 
-    <img src="{{$block->image('background-image', 'desktop')}}" alt="Background Image" class="absolute brightness-50 inset-0 w-full h-full object-cover" />
+    <img src="{{$block->image('background-image', 'desktop')}}" alt="Background Image" class="absolute brightness-50 w-full h-full object-cover" />
 
-    <div class="absolute inset-0 flex flex-col items-center justify-center max-w-2xl mx-auto px-5 md:px-0">
-        <div class=" text-white">
-            <p class="text-sm">{{$block->translatedInput('subtitle')}}</p>
-            <h1 data-w-id="2c9db91f-f074-2622-181b-bad695bdeb4e"
+    <div class="relative z-10 py-12 md:py-[10%] flex flex-col justify-center text-white mx-auto max-w-2xl px-5 md:px-0">
+        <p class="text-sm">{{$block->translatedInput('subtitle')}}</p>
+        <h1 data-w-id="2c9db91f-f074-2622-181b-bad695bdeb4e"
                 class="text-5xl font-bold leading-tight mb-4">{{$block->translatedInput('title')}}</h1>
-            <p class="text-lg mb-8">{!!$block->translatedInput('text') !!}</p>
-        </div>
+        <p class="text-lg mb-8">{!!$block->translatedInput('text') !!}</p>
+        
 
         @if ($block->input('scroll') == 1)
 

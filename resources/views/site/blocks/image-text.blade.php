@@ -1,4 +1,4 @@
-<div class="section mt-16 max-w-2xl mx-auto px-5 md:px-0">
+<div class="py-10 mx-auto max-w-2xl px-5 md:px-0">
     <div>
         {!! $block->translatedInput('text') !!}
     </div>

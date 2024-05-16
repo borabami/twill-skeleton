@@ -1,10 +1,10 @@
-<nav class="bg-gray-50 w-full fixed shadow-lg">
+<nav class="bg-gray-50 w-full z-20 fixed shadow-lg">
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         @php
         $logo = strtok($image, '?');
         @endphp
-           <a href="/home" aria-label="home" aria-current="page" class="brand w-nav-brand w--current" ><img src="{{ $logo }}"
+           <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current" ><img src="{{ $logo }}"
             alt="logo" class="logo" width="181" height="42"></a>
 
         <!-- Mobile menu button -->

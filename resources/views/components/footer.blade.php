@@ -4,7 +4,7 @@
             @php
             $logo = strtok($image, '?');
             @endphp
-            <a href="/home" aria-current="page" aria-label="home" class="footer-logo-holder w-nav-brand w--current"><img
+            <a href="/" aria-current="page" aria-label="home" class="footer-logo-holder w-nav-brand w--current"><img
                     src="{{ $logo }}" alt="logo" width="181" height="42" class="footer-logo"></a>
             <ul class="flex flex-wrap items-center my-6 text-sm font-medium text-black sm:mb-0 ">
                 <li>

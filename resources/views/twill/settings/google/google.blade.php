@@ -11,6 +11,6 @@
     placeholder='<script type="text/javascript">' />
 
 <div data-v-0793316e="" style="margin-top: 10px;">
-    <p data-v-0793316e="" class="f--small input__note">Visita <a data-v-0793316e="" target="_blank"
-            href="https://analytics.google.com/" aria-label="Google Analytics">Google Analytics</a> pagina per maggiori dettagli</p>
+    <p data-v-0793316e="" class="f--small input__note">Visit <a data-v-0793316e="" target="_blank"
+            href="https://analytics.google.com/" aria-label="Google Analytics">Google Analytics</a> page for more details.</p>
 </div>
