@@ -68,11 +68,11 @@
         <br>
         <div class="mt-5">
 
-            <label for="privacy-disclaimer" class="flex space-x-2 items-center">
+            <label for="privacy-disclaimer" class="flex space-x-2 items-center ">
                 <input type="checkbox" id="privacy-disclaimer" name="privacy-disclaimer" :value="on" required>
-                {!!$block->translatedInput('privacy_disclaimer')!!}
+                <p class="break-words">{!!$block->translatedInput('privacy_disclaimer')!!}</p>
             </label>
-            <div class="flex justify-end my-8">
+            <div class="flex justify-end mt-6">
             <button type="submit" id="submit"
                 class="bg-blue-400 rounded h-10 px-4">{{$block->translatedInput('submit_button_label')}}</button>
             </div>
@@ -81,9 +81,9 @@
     </form>
 </div>
 
-<div id="message-success" class="text-green-600 font-semibold max-w-2xl mx-auto px-5 md:px-0"></div>
+<div id="message-success" class="text-green-600 font-semibold max-w-2xl mx-auto px-5 md:px-0 break-words"></div>
 
-<div id="message-error" class="text-red-500 font-semibold max-w-2xl mx-auto px-5 md:px-0"></div>
+<div id="message-error" class="text-red-500 font-semibold max-w-2xl mx-auto px-5 md:px-0 break-words"></div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
