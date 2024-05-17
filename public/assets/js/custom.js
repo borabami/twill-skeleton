@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     const clickableTitles = document.querySelectorAll('.children-link');
 
     clickableTitles.forEach(function(clickableTitle) {
