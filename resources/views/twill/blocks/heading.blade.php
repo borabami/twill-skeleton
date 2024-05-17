@@ -1,4 +1,4 @@
-@twillBlockTitle('Titolo')
+@twillBlockTitle('Title')
 @twillBlockIcon('text')
 
 @php
@@ -31,9 +31,9 @@ $selectOptions = [
 ];
 @endphp
 
-<x-twill::select name="tag" label="Titolo HTML Tag" placeholder="Seleziona un tag di titolo" :options="$selectOptions" default="h1" />
+<x-twill::select name="tag" label="Title HTML Tag" placeholder="Seleziona un tag di title" :options="$selectOptions" default="h1" />
 
-<x-twill::input name="heading" type="text" label="Titolo" :translated="true" />
+<x-twill::input name="heading" type="text" label="Title" :translated="true" />
 
 <hr>
 

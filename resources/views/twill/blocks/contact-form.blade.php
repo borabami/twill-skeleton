@@ -41,3 +41,7 @@
         :placeholder="twillTrans('ex. Submit')" />
 
 </x-twill::formFieldset>
+
+<hr>
+
+<x-twill::input name="id" type="text" label="Elemento id" note="HTML elemento ID" />
