@@ -1,31 +1,45 @@
-# Dashboard skeleton
+# Twill skeleton
 
 ## Description
 
-This boilerplate provides a basic structure for dashboard projects, incorporating Laravel for the backend and Vue.js for the frontend. It utilizes Laravel Breeze for authentication, seamlessly integrated with Vue components. The frontend UI is powered by Vuetify and styled with Tailwind CSS.
+This boilerplate provides a basic structure for projects based on Twill CMS, with the following specifications:
 
 ## Technologies Used
 
-- Laravel
-- Laravel Breeze
-- Vue.js
-- Vuetify
-- Tailwind CSS
+- **Laravel** (latest available version) for the backend.
+- **Twill CMS** (latest available version) for content management.
+- **Spatie Google Fonts** for integrating Google fonts.
+- **SEO Metadata** for optimizing data for search engines.
+- **Page Cache** for improving site performance.
+- **Menu Header** and **Menu Footer** for site navigation.
 
-## Folder Structure
+## Site Modules
 
-The folder structure adheres to our standard for Laravel projects, ensuring clarity and organization.
+The site will consist of the following modules:
 
-## Layout
+- **Pages**: For managing the site's pages.
+- **Settings**: For general site configuration.
 
-The default layout encompasses:
+## Components
 
-- **Frontend:**
-  - Login page.
-  - Registration page.
-  - Forgot and reset password page.
-- **Backend:**
-  - Layout featuring a top bar and navigation drawer.
+The following components will be available for page building:
+
+- **Contact Form**: For creating contact forms.
+- **Hero**: For introductory banners on pages.
+- **Free Text**: For inserting free text.
+- **Title**: For adding titles to pages.
+- **Free Text with Image**: For inserting free text with images.
+## Settings Management
+
+Site settings will include the ability to manage:
+
+- Selection of the homepage.
+- Logo and Favicon.
+- SEO optimization.
+- Google Analytics.
+- Iubenda.
+- Matomo.
+
 
 ## Installation
 
