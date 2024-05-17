@@ -9,11 +9,7 @@
 
 <x-twill::input type="textarea" name="text" label="Text" :rows="4" :translated="true" />
 
-<x-twill::checkbox name="scroll" label="Scroll" />
-
-<x-twill::formConnectedFields field-name="scroll" :field-values="true" :render-for-blocks="true">
-    <x-twill::input name="scroll_id" type="text" label="Scorrere element id" :translated="true" />
-</x-twill::formConnectedFields>
+<x-twill::formConnectedFields field-name="scroll" :field-values="true" :render-for-blocks="true" />
 
 <hr>
 
