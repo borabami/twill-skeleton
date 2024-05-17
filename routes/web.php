@@ -13,7 +13,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::middleware([])->group(function () {
+Route::middleware(config('skeleton.enabled_caches'))->group(function () {
     /**
      * 
      */
