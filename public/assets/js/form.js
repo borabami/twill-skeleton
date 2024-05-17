@@ -15,8 +15,8 @@ form.addEventListener("submit", function (event) {
         .post(actionUrl, formData)
         .then(function (response) {
             const message = response.data.message.replace(/<[^>]+>/g, "");
-            document.getElementById("message").innerText = message;
-            document.getElementById("errors").style.display = "none";
+            document.getElementById("message-success").innerText = message;
+            document.getElementById("message-error").style.display = "none";
         })
         .catch(function (error) {
 
@@ -40,9 +40,9 @@ form.addEventListener("submit", function (event) {
             }
 
 
-            document.getElementById("errors").innerHTML = errorMessage;
-            document.getElementById("errors").style.display = "block";
-            document.getElementById("message").innerText = "";
+            document.getElementById("message-error").innerHTML = errorMessage;
+            document.getElementById("message-error").style.display = "block";
+            document.getElementById("message-success").innerText = "";
         })
         .finally(function (response) {
             submitButton.disabled = false;

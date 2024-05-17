@@ -81,9 +81,9 @@
     </form>
 </div>
 
-<div id="message" class="text-green-600 font-semibold max-w-2xl mx-auto px-5 md:px-0"></div>
+<div id="message-success" class="text-green-600 font-semibold max-w-2xl mx-auto px-5 md:px-0"></div>
 
-<div id="errors" class="text-red-500 font-semibold max-w-2xl mx-auto px-5 md:px-0"></div>
+<div id="message-error" class="text-red-500 font-semibold max-w-2xl mx-auto px-5 md:px-0"></div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
