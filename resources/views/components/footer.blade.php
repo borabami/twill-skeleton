@@ -2,10 +2,17 @@
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             @php
-            $logo = strtok($image, '?');
+            $logo = strtok($image, '?'); 
             @endphp
-            <a href="/" aria-current="page" aria-label="home" class="footer-logo-holder w-nav-brand w--current"><img
-                    src="{{ $logo }}" alt="logo" width="181" height="42" class="footer-logo"></a>
+              @if($hasImage == true)
+             <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current">
+                     <img src="{{$logo}}" alt="logo" class="logo" width="181" height="42">
+                 </a>
+             @else
+                <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current">
+                    {{ config('app.name') }}
+                </a>
+             @endif
             <ul class="flex flex-wrap items-center my-6 text-sm font-medium text-black sm:mb-0 ">
                 <li>
                     @foreach($links as $link)
@@ -28,7 +35,7 @@
             </ul>
         </div>
         <hr class="my-8 border-gray-200 lg:my-12" />
-        <span class="block text-sm font-semibold text-gray-600 text-center">© {{ date('Y') }} <a href="https://flowbite.com/" class="hover:underline"></a>. All Rights Reserved.</span>
+        <span class="block text-sm font-semibold text-gray-600 text-center">© {{ date('Y') }} {{ config('app.name') }}. <a href="https://flowbite.com/" class="hover:underline"></a>All Rights Reserved.</span>
     </div>
 </footer>
 

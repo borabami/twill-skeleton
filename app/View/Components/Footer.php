@@ -28,8 +28,9 @@ class Footer extends Component
          * */
         $links = FooterMenuLink::published()->get()->toTree();
 
-        $image = TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')->image('logo', 'default');
-
-        return view('components.footer', ['links' => $links, 'image' => $image,]);
+        $settings = TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo');
+        $image = $settings->image('logo', 'default');
+        $hasImage = $settings->hasImage('logo');
+        return view('components.footer', ['links' => $links, 'image' => $image, 'hasImage' => $hasImage]);
     }
 }

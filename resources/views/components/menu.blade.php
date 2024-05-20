@@ -2,11 +2,17 @@
 
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         @php
-        $logo = strtok($image, '?');
+        $logo = strtok($image, '?'); 
         @endphp
-           <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current" ><img src="{{ $logo }}"
-            alt="logo" class="logo" width="181" height="42"></a>
-
+          @if($hasImage == true)
+         <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current">
+                 <img src="{{$logo}}" alt="logo" class="logo" width="181" height="42">
+             </a>
+         @else
+            <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current">
+                {{ config('app.name') }}
+            </a>
+         @endif
         <!-- Mobile menu button -->
         <button
             class="mobile-menu-button inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-600 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
