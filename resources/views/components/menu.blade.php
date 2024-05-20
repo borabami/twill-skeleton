@@ -6,7 +6,7 @@
         @endphp
           @if($hasImage == true)
          <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current">
-                 <img src="{{$logo}}" alt="logo" class="logo" width="181" height="42">
+                 <img src="{{$logo}}" alt="logo" class="logo w-full h-10">
              </a>
          @else
             <a href="/" aria-label="home" aria-current="page" class="brand w-nav-brand w--current">
