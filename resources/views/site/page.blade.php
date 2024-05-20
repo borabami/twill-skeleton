@@ -6,12 +6,12 @@
     @include('partials.assets')
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
 
     <x-menu />
 
     <div class="overflow-y-auto">
-        <div class="py-16">
+        <div>
             {!! $item->renderBlocks() !!}
         </div>
     </div>

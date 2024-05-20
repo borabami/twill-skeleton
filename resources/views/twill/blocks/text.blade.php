@@ -21,10 +21,8 @@ $wysiwygOptions = [
 'ordered',
 'bullet',
 'hr',
-'code',
 'link',
 'clean',
-'table',
 'align',
 ];
 

@@ -28,7 +28,7 @@ class Footer extends Component
          * */
         $links = FooterMenuLink::published()->get()->toTree();
 
-        $settings = TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo');
+        $settings = TwillAppSettings::getGroupDataForSectionAndName('general', 'general');
         $image = $settings->image('logo', 'default');
         $hasImage = $settings->hasImage('logo');
         return view('components.footer', ['links' => $links, 'image' => $image, 'hasImage' => $hasImage]);

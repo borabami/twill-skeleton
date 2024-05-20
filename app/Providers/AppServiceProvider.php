@@ -38,7 +38,6 @@ class AppServiceProvider extends ServiceProvider
         TwillAppSettings::registerSettingsGroups(
             SettingsGroup::make()->name('general')->label('General'),
             SettingsGroup::make()->name('homepage')->label('Homepage'),
-            SettingsGroup::make()->name('logo')->label('Logo and Favicon'),
             SettingsGroup::make()->name('seo')->label(twillTrans('twill-metadata::form.titles.fieldset')),
             SettingsGroup::make()->name('google')->label('Google Analytics'),
             SettingsGroup::make()->name('iubenda')->label('Iubenda'),

@@ -1,5 +1,5 @@
 @php
-$favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('logo', 'logo')->image('favicon', 'default'), '?');
+$favicon =strtok(TwillAppSettings::getGroupDataForSectionAndName('general', 'general')->image('favicon', 'default'), '?');
 @endphp
 
 @if($favicon)
