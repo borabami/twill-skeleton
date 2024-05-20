@@ -2,7 +2,7 @@
 @twillBlockIcon('text')
 @twillBlockGroup('app')
 
-<hr />
+<hr>
 
 <x-twill::formFieldset title="Cache" :open="false">
     <a17-cache-button url="/api/clear-cache"></a17-cache-button>
